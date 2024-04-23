@@ -1,0 +1,275 @@
+/*Universal Styling*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+/*Banner Styling*/
+.banner{
+    width: 100%;
+    height: 100vh;
+     /* Background image with semi-transparent gradient overlay */
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    /* Ensuring the banner extends beyond viewport for scrolling */
+    height: 300vh;
+}
+
+/* Navigation bar styling */
+.navbar{
+    width: 85%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+/* Logo styling */
+.logo{
+    width: 120px;
+    cursor: pointer;
+}
+
+.logo a{
+    text-decoration: none;
+    color: white;
+    font-size: 75px;
+}   
+
+/* Navigation links styling */
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+}
+
+/* Navigation link hover effect */
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background:#109b48;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+/* Content styling */
+.content{
+    width: 100%;
+    position: absolute;
+    margin-top: 300px;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1{
+    font-size: 50px;
+    margin-top: 80px;
+    padding-top: 20px;
+    margin-top: 20px;
+}
+
+.content p{
+    margin:20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    padding-top: 60px;
+
+}
+
+/* Button styling */
+/*I used a youtube video to assist with this*/
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    margin: 20px 10px;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #0b6730;
+    background: transparent;
+    color: white;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+span {
+    background: #0b6730;
+    height: 100%;
+    width: 0;
+    border-radius: 25px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+button:hover span{
+    width: 100%;
+}
+
+button:hover {
+    border: none;
+}
+
+/* Footer styling */
+.footer {
+    background: transparent;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Container styling */
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+
+}
+
+/* Heading styling within container */
+.container .heading{
+
+}
+
+/* Styling for headings inside container */
+.container .heading h2{
+    font-size: 50px;
+    margin-top: 80px;
+    color: white;
+    padding-bottom: 10px;
+}
+
+/* Box styling within container */
+.container .box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Image column styling within box */
+.container .box .imgcolm {
+    display: flex;
+    flex-direction: column;
+    width: 32.5%;
+}
+
+/* Image styling within image column */
+.container .box .imgcolm img{
+    width: 100%;
+    padding-bottom: 15px;
+    border-radius: 5px;
+
+}
+
+/*Contact Page Styling*/
+
+.contact {
+    min-height: 100vh;
+    padding: 50px;
+    text-align: center;
+}
+
+.container{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.container h2{
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: white;
+
+}
+
+.contact-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 30px;
+}
+
+.contact-form {
+    text-align: left;
+}
+
+.contact-form h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+input, textarea{
+    width:100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    background-color: #015a24;
+    color: white;
+}
+
+input:focus,
+textarea:focus{
+    outline: none;
+    box-shadow: 0 0 8px white;
+}
+
+.contact-info{
+    text-align: center;
+    color: white;
+}
+
+.contact-info h3{
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #109b48;
+}
+
+.contact-info p{
+    margin-bottom: 10px;
+    color: white;
+}
+
+@media screen and(max-width: 768px){
+    .container{
+        padding: 20px;
+    }
+    .contact-wrapper{
+        grid-template-columns: repeat 1fr;
+    }
+}
+
+.video{
+    padding: auto;
+    border-radius: 25px;
+}
